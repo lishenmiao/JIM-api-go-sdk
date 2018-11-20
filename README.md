@@ -54,7 +54,7 @@ msgbyte,err:=msg.ToBytes()
 
 
 if err ==nil{
-	res:=newim.SendCustomMsg(msgbyte,"/v1/messages")
+	res:=newim.SendCustomMsg(msgbyte)
 	fmt.Println("请求结果:",res)
 }else {
 	fmt.Println("Json转换错误:",err)
