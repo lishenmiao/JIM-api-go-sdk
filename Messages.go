@@ -14,6 +14,8 @@ type Custom_MsgType struct {
 	Msg_type string `json:"msg_type"`
 	Create_time int64  `json:"create_time"`
 	From_platform string  `json:"from_platform"`
+	No_offline bool `json:"no_offline"`
+	No_notification bool `json:"no_notification"`
 	Msg_body interface{} `json:"msg_body"`
 
 }
@@ -48,6 +50,14 @@ func (this * Custom_MsgType)SetFrom_id(from_id string)  {
 
 func (this * Custom_MsgType)SetMsg_type(msg_type string)  {
 	this.Msg_type=msg_type
+
+}
+func (this * Custom_MsgType)SetNo_offline(c bool)  {
+	this.No_offline=c
+
+}
+func (this * Custom_MsgType)SetNo_notification(c bool)  {
+	this.No_notification=c
 
 }
 func (this * Custom_MsgType)SetCustomJsonBody(customJson interface{})  {
