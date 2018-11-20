@@ -26,8 +26,8 @@ func NewImClient(masterSecret,appKey string) *ImClient {
 
 }
 
-func (this * ImClient) SendCustomMsg(msgbody []byte)  {
-	this.PostBody(msgbody,"/v1/messages")
+func (this * ImClient) SendCustomMsg(msgbody []byte) string  {
+	return this.PostBody(msgbody,"/v1/messages")
 }
 
 func (this * ImClient)PostBody(msgbody []byte,patch string) string {
