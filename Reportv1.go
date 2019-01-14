@@ -21,7 +21,7 @@ type ReportImClient struct {
 func NewImReport(masterSecret, appKey string) *ReportImClient {
 	//base64
 	auth := "Basic " + base64.StdEncoding.EncodeToString([]byte(appKey+":"+masterSecret))
-	imer := &ReportImClient{masterSecret, appKey, auth, HOST_NAME_SSL}
+	imer := &ReportImClient{masterSecret, appKey, auth, Report_HOST_NAME_SSL}
 	return imer
 
 }
