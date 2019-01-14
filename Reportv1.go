@@ -27,7 +27,7 @@ func NewImReport(masterSecret, appKey string) *ReportImClient {
 }
 
 func (this *ReportImClient) GetUserMsg(username,start ,count string) string {
-	return this.Get( "/v1/"+username+"/messages"+"?start="+start+"&count="+count)
+	return this.Get( "/v1/users/"+username+"/messages"+"?start="+start+"&count="+count)
 }
 
 func (this *ReportImClient) Get( patch string) string {
